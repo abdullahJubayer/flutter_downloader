@@ -647,36 +647,36 @@ class DownloadWorker(context: Context, params: WorkerParameters) :
                         builder.setContentText(msgInProgress)
                             .setProgress(100, progress, false)
                         builder.setOngoing(true)
-                            .setSmallIcon(android.R.drawable.stat_sys_download)
+                            .setSmallIcon(notificationIconRes)
                     } else {
                         builder.setContentText(msgComplete).setProgress(0, 0, false)
                         builder.setOngoing(false)
-                            .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                            .setSmallIcon(notificationIconRes)
                     }
                 }
 
                 DownloadStatus.CANCELED -> {
                     builder.setContentText(msgCanceled).setProgress(0, 0, false)
                     builder.setOngoing(false)
-                        .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                        .setSmallIcon(notificationIconRes)
                 }
 
                 DownloadStatus.FAILED -> {
                     builder.setContentText(msgFailed).setProgress(0, 0, false)
                     builder.setOngoing(false)
-                        .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                        .setSmallIcon(notificationIconRes)
                 }
 
                 DownloadStatus.PAUSED -> {
                     builder.setContentText(msgPaused).setProgress(0, 0, false)
                     builder.setOngoing(false)
-                        .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                        .setSmallIcon(notificationIconRes)
                 }
 
                 DownloadStatus.COMPLETE -> {
                     builder.setContentText(msgComplete).setProgress(0, 0, false)
                     builder.setOngoing(false)
-                        .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                        .setSmallIcon(notificationIconRes)
                 }
 
                 else -> {
